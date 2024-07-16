@@ -1,0 +1,145 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Circles with Login Form</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .circle {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .c1, .c2, .c3 {
+            width: 500px;
+            height: 500px;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            position: absolute;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transition: box-shadow 0.3s ease;
+        }
+        .c1 {
+            border-top-left-radius: 259px;
+            border-top-right-radius: 259px;
+            border-bottom-left-radius: 355px;
+            border-bottom-right-radius: 280px;
+            animation-name: circle1;
+        }
+        .c2 {
+            border-top-left-radius: 219px;
+            border-top-right-radius: 240px;
+            border-bottom-left-radius: 365px;
+            border-bottom-right-radius: 190px;
+            animation-name: circle2;
+        }
+        .c3 {
+            border-top-left-radius: 239px;
+            border-top-right-radius: 369px;
+            border-bottom-left-radius: 334px;
+            border-bottom-right-radius: 430px;
+            animation-name: circle3;
+        }
+        .circle:hover .c1 {
+            box-shadow: 0 0 25px yellow;
+        }
+        .circle:hover .c2 {
+            box-shadow: 0 0 25px red;
+        }
+        .circle:hover .c3 {
+            box-shadow: 0 0 25px green;
+        }
+        .login {
+            position: absolute;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            width: 300px;
+        }
+        .login h2 {
+            margin-bottom: 20px;
+        }
+        .login input[type="text"],
+        .login input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            text-align: center;
+            margin: 10px 0;  
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .login button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .login a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 15px;
+        }
+        @keyframes circle1 {
+            from {
+                transform: rotateZ(0deg);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+        @keyframes circle2 {
+            from {
+                transform: rotateZ(0deg);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+        @keyframes circle3 {
+            from {
+                transform: rotateZ(0deg);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="login">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="button">Sign in</button>
+            <div>
+                <a href="#">Forget Password</a>
+                <a href="#">Signup</a>
+            </div>
+            <img src="" alt="">
+        </div>
+    </div>
+</body>
+</html>

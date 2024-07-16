@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Light</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .parent {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* .child1,
+        .child2 {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        } */
+
+        .child1 {
+            width: 100%;
+            height: 50svh;
+            top: 0;
+            /* background:linear-gradient(to right,rgb(130, 55, 15),orange,rgb(216, 211, 202)); */
+            background-color: orange;
+
+            animation-name: orangeed;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: lin;
+            position: absolute;
+
+        }
+
+        .child2 {
+            top: 50%;
+            width: 100%;
+            height: 50svh;
+            background-color: black;
+            position: absolute;
+            animation-name: blackk;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+
+        }
+
+        /* .moon, .sun {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+        .moon {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: rgb(255, 255, 255);
+            /* animation-name: moon; */
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            transform: rotate(45deg) translate(50px);
+            animation-timing-function: ease;
+
+        }
+
+        .sun {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: orangered;
+            background-image: url('../images/moon.png');
+
+
+            /* animation-name: sun; */
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            transform: rotate(45deg) translate(50px);
+            animation-timing-function: ease;
+
+        }
+
+        @keyframes sun {
+            0% {
+                transform: rotate(0deg) translateX(360px);
+            }
+
+            100% {
+                transform: rotate(90deg) translateX(360px);
+
+            }
+
+        }
+
+        @keyframes moon {
+            0% {
+                transform: rotate(0deg) translateX(-360px);
+            }
+
+            100% {
+                transform: rotate(90deg) translateX(-360px);
+            }
+        }
+
+        @keyframes blackk {
+            0% {
+                background-color: black;
+            }
+
+            100% {
+                background: linear-gradient(to right, rgb(130, 55, 15), orange, rgb(216, 211, 202));
+            }
+        }
+
+        @keyframes orangeed {
+            0% {
+                background: linear-gradient(to right, rgb(130, 55, 15), orange, rgb(216, 211, 202));
+            }
+
+            100% {
+                background: linear-gradient(to right, black, rgb(20, 18, 18), black);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child1"></div>
+        <div class="moon"></div>
+        <div class="sun"></div>
+        <div class="child2"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            .parent{
+                position: relative;
+                width: 300px;
+                height: 300px;
+                border: 3px solid black;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .parent img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: -1;
+            }
+            .parent1{
+                position: relative;
+                cursor: pointer;
+                box-shadow: 10px 5px 5px grey;
+
+            }
+            .child1{
+                padding: 5px;
+                border: 1px solid black;
+                width: fit-content;
+                height: fit-content;
+                position: absolute;
+                background-color: aquamarine;
+                
+                border-radius: 40px;
+            }
+            .child2{
+                top: 50px;
+                position: absolute;
+                display: none;
+                width: fit-content;
+                padding: 5px 10px;
+
+            }
+            .child2 div:hover{
+                background-color: rgb(240, 139, 139);
+                /* border-bottom: 3px;*/
+            } 
+            .parent1:hover .child2{
+                position: absolute;
+                top: 30px;
+                display: block;
+                color: rgb(231, 231, 107);
+               
+            }
+            .option1{
+                /* border-bottom: 1px solid black; */
+                /* border: 1px solid black; */
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="parent">
+            PowerStar pawan-kalyan
+            <div class="child">
+                <img src="../images/1.png" alt="jk">
+            </div>
+        </div>
+        <br>
+        <div class="parent1">
+            <div class="child1">
+                Hover ME
+            </div>
+            <div class="child2">
+                <div class="option1">MLA</div><div class="option1"></div>
+                <div class="option1">Deputy Cm</div>
+                <div class="option1">Minister</div>
+                <div class="option1">Panchayat</div>
+            </div>
+        </div>
+    </body>
+</html>

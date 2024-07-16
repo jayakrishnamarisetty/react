@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button{
+                width:150px;
+                height:80px;
+                position: relative;
+                border-radius: 10px;
+                background-color:black;
+                color:white;
+                transition-property: all;
+                transition-duration: 3s;
+                overflow: hidden;
+                border-top: 3px solid rgb(241, 7, 7);
+                transform: skew(-20deg);
+                border-bottom:3px solid red;
+            }
+            button:hover{
+                color:black;
+                z-index: 9999;
+                box-shadow: 1px 2px 9px  black;
+            }
+            button::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: aqua;
+                top: 0;
+                position: absolute;
+                left: -200px;
+                transition-property: all;
+                transition-duration: 3s;
+            }
+            button:hover::after{
+                left:0px;
+                z-index: -9999;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <button>ClickMe</button>
+        <!-- <button>jk</button> -->
+
+    </body>
+</html>

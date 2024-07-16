@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>solar</title>
+        <style>
+           
+            .parent{
+                width: 100%;
+                height: 100%;
+                /* background-color: black; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                background-image: url(../images/i.jpeg);
+            }
+            .parent img{
+                width: 100%;
+                height:100%;
+                opacity: 0.3;
+
+            }
+            .earth{
+                width:200px;
+                height:200px;
+                background-image: url("../images/sai.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                /* box-shadow: 1px 1px 3px  rgb(248, 248, 249); */
+            }
+            .earth img{
+                width: 100%;
+                height: 100%;
+                
+            }
+            .moon{
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                background-image: url(../images/jkt.png);
+                border-radius: 50%;
+                position: absolute;
+                box-shadow: 2px 2px 35px white;
+                animation-name: jaya;
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+
+            }
+            .moon img{
+                width:100%;
+                height:100%;
+            }
+            @keyframes jaya{
+                0%{
+                right: 100px;
+                bottom: 50svh;
+            }
+            8%{
+                
+                right: 300px;
+                bottom: 65svh;
+            }
+            16%
+            {
+                right: 500px;
+                bottom: 76svh;
+            }
+            24%{
+                right: 700px;
+                bottom: 75.5svh;
+            }
+            32%{
+                right: 900px;
+                bottom: 75svh;
+            }
+            40%{
+                right: 1100px;
+                bottom: 65svh;
+            }
+            48%{
+                right: 1300px;
+                bottom: 40svh;
+            }
+            56%{
+                right: 1100px;
+                bottom: 20svh;
+            }
+            64%{
+                right: 900px;
+                bottom: 10svh;
+            }
+            74%{
+                right: 700px;
+                bottom: 8svh;
+            }
+            82%{
+                right: 500px;
+                bottom: 10svh;
+            }
+            90%{
+                right: 300px;
+                bottom: 15svh;
+            }
+            100%
+            {
+                right: 100px;
+                bottom: 50svh;
+            }
+        }
+            
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <!-- <img src="../images/rug.jpeg" alt=""> -->
+             <div class="earth">
+                <img src="../images/sai.png" alt="">
+             </div>
+             <div class="moon">
+                <!-- <img src="../images/img.png" alt=""> -->
+             </div>
+
+
+        </div>
+    </body>
+</html>

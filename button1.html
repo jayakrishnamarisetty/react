@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style> 
+        button { 
+            padding: 1rem 3rem; 
+            background-color: rgba(0, 128, 0, 0.625); 
+            border: 0px; 
+            color: white; 
+            font-size: 20px; 
+            position: relative; 
+            border-radius: 1.2rem; 
+            cursor: pointer; 
+            overflow: hidden;
+        } 
+        button:hover{
+               transform: skew(-10deg); 
+               background:linear-gradient( rgb(68, 170, 204),pink );
+               box-shadow: 1px 3px 8px solid black;    
+               color: black;
+        }
+  
+  
+        button::after { 
+            content: ''; 
+            position: absolute; 
+            width: 0rem; 
+            height: 0.2rem; 
+            background:linear-gradient(rgb(68, 170, 204),pink ); 
+            right: 0; 
+            bottom: 0; 
+            border-radius: 0.2rem; 
+        } 
+  
+        button:hover::after { 
+            width: 11.2rem; 
+            transition: all 1s linear; 
+            /* transform: skew(10deg); */
+        } 
+    </style> 
+    </head>
+    <body>
+        <button>Hit ME</button>
+    </body>
+</html>
